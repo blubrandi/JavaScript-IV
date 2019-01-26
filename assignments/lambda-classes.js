@@ -55,7 +55,7 @@ class Student extends Person {
   }
 }
 
-class ProjectManagers extends Instructor {
+class ProjectManager extends Instructor {
 
   constructor (PMInfo) {
     super (PMInfo) 
@@ -68,6 +68,112 @@ class ProjectManagers extends Instructor {
   }
 
   debugsCode() {
-    
+
   }
 }
+
+
+// Objects - Instructors
+
+const Ashe = new Instructor({
+  name: 'Ashe',
+  location: 'Southwest USA',
+  age: 28,
+  gender: 'female',
+  favLanguage: 'JavaScript',
+  specialty: 'Design',
+  catchPhrase: 'Yo, this needs to be prettier.'
+})
+
+const Hanzo = new Instructor({
+  name: 'Hanzo',
+  location: 'Japan',
+  age: 39,
+  gender: 'male',
+  favLanguage: 'Python',
+  specialty: 'Back-end',
+  catchPhrase: 'Why isn\'t this working?'
+})
+
+const Moira = new Instructor({
+  name: 'Moira',
+  location: 'Rialto',
+  age: '37',
+  gender: 'female',
+  favLanguage: 'JavaScript',
+  specialty: 'Full-stack',
+  catchPhrase: 'Sup?'
+})
+
+// Objects - Students
+
+const Mei = new Student({
+  name: 'Mei',
+  location: 'Japan',
+  age: '21',
+  gender: 'female',
+  previousBackground: 'Environmental Science',
+  className: 'CS22',
+  favSubjects: [
+    'Less',
+    'HTML',
+    'CSS'
+  ]
+})
+
+const Brigtte = new Student({
+  name: 'Brigtte',
+  location: 'Stockholm',
+  age: '23',
+  gender: 'female',
+  previousBackground: 'Shield Crafting',
+  className: 'CS21',
+  favSubjects: [
+    'JavaScript',
+    'React',
+    'Redux'
+  ]
+})
+
+const McCree = new Student({
+  name: 'McCree',
+  location: 'Southwest USA',
+  age: '30',
+  gender: 'male',
+  previousBackground: 'Outlaw',
+  className: 'CS22',
+  favSubjects: [
+    'Python',
+    'Front-End Development',
+    'JavaScript'
+  ]
+})
+
+// Objects - Project Managers
+
+const Symmetra = new ProjectManager({
+  name: 'Symmetra',
+  location: 'India',
+  age: '30',
+  gender: 'female',
+  gradClassName: 'CS14',
+  favInstructor: 'Lucio'
+})
+
+const Reaper = new ProjectManager({
+  name: 'Reaper',
+  location: 'Los Angeles',
+  age: '33',
+  gender: 'male',
+  gradClassName: 'CS9',
+  favInstructor: 'Roadhog'
+})
+
+const Widowmaker = new ProjectManager({
+  name: 'Widowmaker',
+  location: 'Paris',
+  age: '27',
+  gender: 'female',
+  gradClassName: 'CS17',
+  favInstructor: 'Zenyatta'
+})
