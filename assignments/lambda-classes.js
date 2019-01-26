@@ -43,15 +43,15 @@ class Student extends Person {
   }
 
   listsSubjects() {
-    console.log()
+    console.log(...this.favSubjects)
   }
 
-  PRAssignment() {
-
+  PRAssignment(student,subject) {
+    console.log(`${student.name} has submitted a PR for ${subject}`)
   }
 
-  sprintChallenge() {
-
+  sprintChallenge(student,subject) {
+    console.log(`${student.name} has begun sprint challenge on ${subject}`)
   }
 }
 
@@ -63,19 +63,19 @@ class ProjectManager extends Instructor {
       this.favInstructor = PMInfo.favInstructor
   }
 
-  standUp() {
-
+  standUp(pm,channel) {
+    console.log(`${pm.name} announces to ${channel}, @channel standy times!`)
   }
 
-  debugsCode() {
-
+  debugsCode(pm,student,subject) {
+    console.log(`${pm.name} debugs ${student.name}'s code on ${subject}`)
   }
 }
 
 
 // Objects - Instructors
 
-const Ashe = new Instructor({
+const ashe = new Instructor({
   name: 'Ashe',
   location: 'Southwest USA',
   age: 28,
@@ -85,7 +85,7 @@ const Ashe = new Instructor({
   catchPhrase: 'Yo, this needs to be prettier.'
 })
 
-const Hanzo = new Instructor({
+const hanzo = new Instructor({
   name: 'Hanzo',
   location: 'Japan',
   age: 39,
@@ -95,7 +95,7 @@ const Hanzo = new Instructor({
   catchPhrase: 'Why isn\'t this working?'
 })
 
-const Moira = new Instructor({
+const moira = new Instructor({
   name: 'Moira',
   location: 'Rialto',
   age: '37',
@@ -107,7 +107,7 @@ const Moira = new Instructor({
 
 // Objects - Students
 
-const Mei = new Student({
+const mei = new Student({
   name: 'Mei',
   location: 'Japan',
   age: '21',
@@ -121,8 +121,8 @@ const Mei = new Student({
   ]
 })
 
-const Brigtte = new Student({
-  name: 'Brigtte',
+const brigitte = new Student({
+  name: 'Brigitte',
   location: 'Stockholm',
   age: '23',
   gender: 'female',
@@ -135,7 +135,7 @@ const Brigtte = new Student({
   ]
 })
 
-const McCree = new Student({
+const mccree = new Student({
   name: 'McCree',
   location: 'Southwest USA',
   age: '30',
@@ -151,7 +151,7 @@ const McCree = new Student({
 
 // Objects - Project Managers
 
-const Symmetra = new ProjectManager({
+const symmetra = new ProjectManager({
   name: 'Symmetra',
   location: 'India',
   age: '30',
@@ -160,7 +160,7 @@ const Symmetra = new ProjectManager({
   favInstructor: 'Lucio'
 })
 
-const Reaper = new ProjectManager({
+const reaper = new ProjectManager({
   name: 'Reaper',
   location: 'Los Angeles',
   age: '33',
@@ -169,7 +169,7 @@ const Reaper = new ProjectManager({
   favInstructor: 'Roadhog'
 })
 
-const Widowmaker = new ProjectManager({
+const widowmaker = new ProjectManager({
   name: 'Widowmaker',
   location: 'Paris',
   age: '27',
@@ -177,3 +177,16 @@ const Widowmaker = new ProjectManager({
   gradClassName: 'CS17',
   favInstructor: 'Zenyatta'
 })
+
+// Invoking
+
+ashe.speak();
+hanzo.demo('JavaScript');
+moira.grade(mei,'JavaScript');
+brigitte.listsSubjects();
+mccree.PRAssignment(mccree,'HTML');
+mei.sprintChallenge(mei,'Advanced CSS and LESS');
+widowmaker.standUp(widowmaker,'#widowsmallgroup');
+symmetra.debugsCode(symmetra, mei, 'React');
+
+

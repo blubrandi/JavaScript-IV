@@ -106,9 +106,9 @@ class Humanoid extends CharacterStats {
   console.log(mage.takeDamage()); // Bruce took damage.
   console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
 
-2. Your goal is to refactor all of this code to use ES6 Classes. The console.log() statements should still return what is expected of them.
 
-*/
+//  2. Your goal is to refactor all of this code to use ES6 Classes. The console.log() statements should still return what is expected of them.
+
 
 // function GameObject(attr){
 //     this.createdAt = attr.createdAt
